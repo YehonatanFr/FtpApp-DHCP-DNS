@@ -168,23 +168,6 @@ def receivelist(client_socket):
     print(file_list_str)
 
 # Function to receive a file from the server using TCP
-# def receive_file(file_name):
-#     time.sleep(1)
-#     data = client_socket.recv(max_packet_size)
-#     file_size = float(data)
-#     msg = 'ack'
-#     client_socket.send(msg.encode())
-#     print('ack sent from client')
-#     print(f"The size of the file for download is: {file_size/1000} KB")
-#     print('Start to download.. ')
-#     with open(ftp_dir + file_name, 'wb') as f:
-#         packets_received = 0
-#         while packets_received < file_size:
-#             packet_data = client_socket.recv(max_packet_size)
-#             f.write(packet_data)
-#             packets_received += len(packet_data)
-#     print('Finish download File received successfully!\n')
-
 def receive_file(file_name):
 
     filepath = os.path.join(ftp_dir , file_name)
@@ -276,6 +259,7 @@ ftp_server_ip = get_ftp_server_ip()
 print(f"the descoverd FTP ip is: {ftp_server_ip}")
 
 client_socket.connect((ftp_server_ip, server_port))
+
 # The main loop
 while True:
 

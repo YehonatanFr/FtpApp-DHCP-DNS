@@ -129,22 +129,6 @@ def SendFileList():
         return
 
 # Function to send a file to a client using TCP
-# def send_file(file_name):
-#     if file_exists(file_name):
-#         file_size = os.path.getsize(ftp_dir + file_name)
-#         client_socket.send(str(file_size).encode())
-#         time.sleep(1)
-#         msg = client_socket.recv(max_packet_size)
-#         ack_msg = msg.decode()
-#         if( ack_msg == 'ack'):
-#             f = open(ftp_dir + file_name, "rb")
-#             file_data = f.read()
-#             client_socket.sendall(file_data)
-#             f.close() 
-#     else:
-#         error_msg = 'File does not exist!'
-#         client_socket.send(error_msg.encode())
-
 def send_file(file_name):
     if file_exists(file_name):
         file_size = os.path.getsize(ftp_dir + file_name)
