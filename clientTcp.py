@@ -267,16 +267,17 @@ while True:
     print("Please choose an action:")
     print("A. Download a file")
     print("B. Upload a file")
-    print("C. Show files in the folder")
+    print("C. Show files in the server folder")
     print("D. Delete a file")
-    print("E. Close the program")
+    print("E. Show files in the client folder")
+    print("F. Close the program")
 
     # Get the user's choice
-    action = input("\nEnter your choice (A, B, C, D, or E): ")
+    action = input("\nEnter your choice (A, B, C, D, E, or F): ")
     
-    if action not in ['A', 'B', 'C', 'D', 'E']:
+    if action not in ['A', 'B', 'C', 'D', 'F', 'E']:
         print("\nSomethine is wrong please type again")
-        action = input("Enter your choice (A, B, C, D, or E): ")
+        action = input("\nEnter your choice (A, B, C, D, or E): ")
     client_socket.send(action.encode())
 
     client_socket.settimeout(10)
@@ -295,7 +296,11 @@ while True:
     elif ( action == 'D'):
         remove(client_socket)
     elif ( action == 'E'):
-        print('Close the program')
+        print("\nFiles in client's Folder:")
+        ListFolder(ftp_dir)
+        print()
+    elif ( action == 'F'):
+        print('\nClose the program')
         break
             
 client_socket.close()

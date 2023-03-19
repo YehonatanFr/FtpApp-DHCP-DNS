@@ -46,9 +46,6 @@ def remove(ftp_dir):
         msg = 'File has been removed'
         client_socket.send(msg.encode())
 
-
-
-
 # Print the files sorted by name
 def SendFileListByName():
     file_list = []
@@ -156,6 +153,7 @@ def send_file(file_name):
             msg_client = msg_data.decode()
             
             if(msg_client != 'Y'):
+                print("Download stop")
                 return
             
             # Sending the second half
@@ -167,6 +165,8 @@ def send_file(file_name):
         error_msg = 'File does not exist!'
         client_socket.send(error_msg.encode())
 
+    print('Done download')
+
 # Function to receive a file from the client
 def receive_file(file_name):
     time.sleep(1)
@@ -174,41 +174,41 @@ def receive_file(file_name):
     file_size = float(data)
     msg = 'ack'
     client_socket.send(msg.encode())
-    print('Start to upload.. ')
+    print('\nStart to upload.. ')
     with open(ftp_dir + file_name, 'wb') as f:
         packets_received = 0
         while packets_received < file_size:
             packet_data = client_socket.recv(max_packet_size)
             f.write(packet_data)
             packets_received += len(packet_data)
-    print('Finish download\tFile received successfully!')
+    print('Finish Upload File received successfully!\n')
 
 # Download function - download a file from the server
 def download():
         filelist = ListFolder(ftp_dir)
         filelist_bytes = bytes(str(filelist), encoding='utf-8')
         client_socket.send(filelist_bytes)
-        print('Server wait for file name')
+        print('\nServer wait for file name')
         request_packet = client_socket.recv(max_packet_size)
         file_name = request_packet.decode()
         print("The file name want to download: ", file_name)
         send_file(file_name)
-        print('Done download')
+        
 
 # Upload function - upload a file to the server
 def upload():
-        print('Server wait for file name')
+        print('\nServer wait for file name')
         request_packet = client_socket.recv(max_packet_size)
         file_name = request_packet.decode()
         time.sleep(1)
         receive_file(file_name)
-        print('Done Upload')
+        print('\nDone Upload')
 
 
 # The main loop
 while True:
 
-    print('Server wait for client decesion')
+    print('\nServer wait for client decesion')
     client_socket.settimeout(60)
     choice_packet = client_socket.recv(max_packet_size)
     action = choice_packet.decode()
@@ -221,8 +221,8 @@ while True:
         SendFileList()
     elif (action == 'D'):
         remove(ftp_dir)
-    elif (action == 'E'):
-        print('Close the program')
+    elif (action == 'F'):
+        print('\nClose the program')
         break
 
 server_socket.close()
