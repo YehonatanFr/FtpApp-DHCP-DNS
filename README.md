@@ -60,10 +60,36 @@ such as requesting a file transfer or listing the contents of a directory.
 In our case we used one channel that transmits both commands and the data.       
 [Move to top](#FtpApp-DHCP-DNS)       
 
-# How to run the project?
+# How to run the project? 
+## Before the run
+First, we need to create two folders where the code files will be stored.     
+one for the client named "ftp_client_files", and one for the server named "ftp_server_files".      
+Then, we need to choose the files we want to download or upload.      
+
+After completing these steps, we need to pay attention to an important detail.      
+In the code for the client, DHCP, and DNS server, we used a variable called `device`.       
+We did this because each computer has a different device name.        
+To find the name of the device, we need to run the command `ifconfig` and then locate our device's name.
+   
+
+## Start to run      
+First, to run the the project we need to used four trminals in the same time.       
+And we need to run thr commands with administrator permissions, meaning with `sudo` command.  
+
+![Screenshot from 2023-03-23 12-21-29](https://user-images.githubusercontent.com/118724971/227174652-df7bc621-af28-41a0-9e0f-b5ca9aa8bf79.png)
+
+After we run all the following commands, we can see the server cummunicate between them, the DHCP server give an IP address for the client,     
+then the DNS server give the IP of the FTP server to the client, and then the client cummunicate with the server and ask what he wants to do?     
 
 
+![Screenshot from 2023-03-23 12-27-40](https://user-images.githubusercontent.com/118724971/227175684-f92c29bd-783d-4769-b58e-f0e5ae4c367e.png)
 
+
+Then the client choose whatever he wants to do.     
+
+[Move to top](#FtpApp-DHCP-DNS) 
+
+# Summary
 
 
 
