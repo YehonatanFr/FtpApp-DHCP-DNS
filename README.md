@@ -19,7 +19,9 @@ DHCP operates on the client-server model,
 where the DHCP server is responsible for assigning and managing IP addresses,      
 and the client device receives the address and other settings.      
 DHCP is used in many networks, including home, business, and enterprise networks,       
-to simplify network management and reduce the chances of IP address conflicts.      
+to simplify network management and reduce the chances of IP address conflicts.  
+[Move to top](#About-the-project)      
+
 ### DNS (Domain Name System)      
 DNS is a protocol used to translate human-readable domain names.     
 When a user types a domain name into a web browser or other network application,       
@@ -27,7 +29,9 @@ the application sends a DNS query to a DNS server, requesting the IP address of 
 
 The DNS server then searches its database for the IP address associated with the domain name and returns it to the requesting application.      
 DNS operates on a hierarchical, distributed database system,        
-where different levels of DNS servers are responsible for different parts of the domain name system.     
+where different levels of DNS servers are responsible for different parts of the domain name system.  
+[Move to top](#About-the-project)      
+
 ### TCP (Transmission Control Protocol)      
 TCP is a reliable, connection-oriented protocol used to transmit data over a network.        
 TCP breaks down data into packets and sends them over the network,       
@@ -38,6 +42,7 @@ TCP uses a three-way handshake process to establish a connection between two dev
 where the devices exchange control messages to establish and confirm the connection.         
 Once the connection is established, data can be transmitted in both directions.        
 TCP is widely used for applications such as web browsing, email, and file transfers.      
+[Move to top](#About-the-project)       
 
 ## What is FTP?      
 FTP (File Transfer Protocol) is a protocol used to transfer files between computers on a network.      
@@ -49,7 +54,9 @@ For example download a file from the server, upload a file from the server, remo
 Usually, FTP uses two separate channels to transfer files: a command channel and a data channel.     
 The command channel is used for sending commands between the client and server,       
 such as requesting a file transfer or listing the contents of a directory.       
-In our case we used one channel that transmits both commands and the data.
+In our case we used one channel that transmits both commands and the data.       
+[Move to top](#About-the-project)       
+
 
 
 
