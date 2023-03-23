@@ -1,5 +1,8 @@
 # FtpApp-DHCP-DNS
-A Final project in Network course.
+A Final project in Network course.      
+**The project were written by:** 
+- [Yehonatan Friedman](https://github.com/YehonatanFr)
+- [Hagay Knorovich](https://github.com/hagayknoro)
 
 # About the ptoject    
 In this Project we implements FTP(File Transfer Protocol) with TCP, based on client-server model with multiple serveres.     
@@ -57,7 +60,7 @@ such as requesting a file transfer or listing the contents of a directory.
 In our case we used one channel that transmits both commands and the data.       
 [Move to top](#About-the-project)       
 
-
+# How to run the project?
 
 
 
