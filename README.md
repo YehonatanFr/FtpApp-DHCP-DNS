@@ -90,7 +90,13 @@ Then the client choose whatever he wants to do.
 [Move to top](#FtpApp-DHCP-DNS) 
 
 # Summary
+For summary, The project was definitely not a simple and very challenging project.
+We learned a lot about how to communicate based on TCP,       
+how much TCP enables reliable communication, what protocols it uses to be reliable, etc.      
+In addition, we learned about how to build packets using the scapy library, about the roles of the DHCP and DNS servers.
 
+
+Hope you enjoyed :wink:
 
 
 
