@@ -74,11 +74,11 @@ To find the name of the device, we need to run the command `ifconfig` and then l
 
 ## Start to run      
 First, to run the the project we need to used four trminals in the same time.       
-And we need to run thr commands with administrator permissions, meaning with `sudo` command.  
+And we need to run the commands with administrator permissions, meaning with `sudo` command.  
 
 ![Screenshot from 2023-03-23 12-21-29](https://user-images.githubusercontent.com/118724971/227174652-df7bc621-af28-41a0-9e0f-b5ca9aa8bf79.png)
 
-After we run all the following commands, we can see the server cummunicate between them, the DHCP server give an IP address for the client,     
+After we run all the following commands, we can see the servers cummunicate between them, the DHCP server give an IP address for the client,     
 then the DNS server give the IP of the FTP server to the client, and then the client cummunicate with the server and ask what he wants to do?     
 
 
