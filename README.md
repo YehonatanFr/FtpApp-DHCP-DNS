@@ -64,7 +64,7 @@ In our case we used one channel that transmits both commands and the data.
 ## Before the run
 First, we need to create two folders where the code files will be stored.     
 one for the client named "ftp_client_files", and one for the server named "ftp_server_files".      
-Then, we need to choose the files we want to download or upload.      
+Then, we need to locate there the files we want to download or upload.      
 
 After completing these steps, we need to pay attention to an important detail.      
 In the code for the client, DHCP, and DNS server, we used a variable called `device`.       
